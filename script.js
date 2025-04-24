@@ -1,6 +1,6 @@
 // FizzBuzz program
 
-function fizzBuzz(n) {
+function fizzBuzz(n, enablePop = false) {
   let result = "";
 
   if (n % 3 === 0) {
@@ -13,6 +13,10 @@ function fizzBuzz(n) {
   }
   result += n.toString().split("").filter((num) => num === "5").map(() => "Buzz").join("");
 
+  if (enablePop && n % 2 === 0) {
+    result += "Pop"; // <- Only when explicitly enabled
+  }
+    
   return result || n;
 
 }

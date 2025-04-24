@@ -22,3 +22,10 @@ test('returns the number for non-FizzBuzz numbers', () => {
   expect(fizzBuzz(1)).toBe(1);
   expect(fizzBuzz(7)).toBe(7);
 });
+
+test('returns Pop for even numbers', () => {
+  expect(fizzBuzz(2, true)).toBe("Pop");
+  expect(fizzBuzz(4, true)).toBe("Pop");
+  expect(fizzBuzz(10, true)).toBe("BuzzPop");
+  expect(fizzBuzz(30, true)).toBe("FizzFizzBuzzPop");
+});
